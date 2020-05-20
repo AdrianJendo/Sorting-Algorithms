@@ -1,6 +1,3 @@
-// Selection Sort.cpp : This file contains the 'main' function. Program execution begins and ends there.
-//
-
 #include <iostream>
 #include <vector>
 
@@ -24,22 +21,4 @@ void selectSort(vector<int>& unsorted, bool ascend) {
             unsorted[i] = min;
         }
     }
-}
-
-int main()
-{
-    vector<int> unsorted = { 5,6,7,3,112,2,1,12,14,444,100200,4,-1,3,17 };
-
-    for (int i = 0; i < unsorted.size(); i++)
-        cout << unsorted[i] << " ";
-
-    cout << endl;
-    selectSort(unsorted, false);
-
-    for (int i = 0; i < unsorted.size(); i++)
-        cout << unsorted[i] << " ";
-
-
-
-    return 0;
 }
