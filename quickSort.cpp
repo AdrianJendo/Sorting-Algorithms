@@ -46,10 +46,8 @@ void quickSort(vector<int>& unsorted, int start, int end, const bool& ascending)
 			}
 			if (i > j) { //a cross happened
 				swap(unsorted, start, j); //swap pivot with j
-				if (j != 0)
-					quickSort(unsorted, start, j, ascending); //recursive call to sort subcollections in 0(1) memory
-				if (j + 1 != size)
-					quickSort(unsorted, j + 1, end, ascending);
+				quickSort(unsorted, start, j, ascending); //recursive call to sort subcollections in 0(1) memory
+				quickSort(unsorted, j + 1, end, ascending);
 				return; //exit the function to not loop infinitely
 			}
 			else { //swap high and low if no cross 
